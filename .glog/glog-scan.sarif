@@ -10,7 +10,321 @@
           "version": "1.0.0",
           "semanticVersion": "1.0.0",
           "informationUri": "https://www.glog.ai",
-          "rules": [],
+          "rules": [
+            {
+              "id": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
+              "name": "resources.rules.open-never-closed",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.open-never-closed"
+              },
+              "fullDescription": {
+                "text": "file object opened without corresponding close"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.open-never-closed"
+                ]
+              }
+            },
+            {
+              "id": "6ace627f-4c73-3782-9f72-09d5f678c9a8",
+              "name": "resources.rules.eqeq-is-bad",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.eqeq-is-bad"
+              },
+              "fullDescription": {
+                "text": "Detected a useless comparison operation `$X == $X` or `$X != $X`. This\noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Detected a useless comparison operation `$X == $X` or `$X != $X`. This\noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected a useless comparison operation `$X == $X` or `$X != $X`. This\noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.eqeq-is-bad"
+                ]
+              }
+            },
+            {
+              "id": "9d8c0381-3d5d-3e48-b16f-f37b6e964d0a",
+              "name": "trailofbits.python.pickles-in-pytorch.pickles-in-pytorch",
+              "shortDescription": {
+                "text": "Opengrep Finding: trailofbits.python.pickles-in-pytorch.pickles-in-pytorch"
+              },
+              "fullDescription": {
+                "text": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "helpUri": "https://semgrep.dev/r/trailofbits.python.pickles-in-pytorch.pickles-in-pytorch",
+              "help": {
+                "text": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/trailofbits.python.pickles-in-pytorch.pickles-in-pytorch)\n - [https://blog.trailofbits.com/2021/03/15/never-a-dill-moment-exploiting-machine-learning-pickle-files/](https://blog.trailofbits.com/2021/03/15/never-a-dill-moment-exploiting-machine-learning-pickle-files/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "trailofbits.python.pickles-in-pytorch.pickles-in-pytorch"
+                ]
+              }
+            },
+            {
+              "id": "f60044af-0629-3160-be2a-fa53996cc3eb",
+              "name": "resources.rules.code-after-unconditional-return",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.code-after-unconditional-return"
+              },
+              "fullDescription": {
+                "text": "code after return statement will not be executed"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "code after return statement will not be executed\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "code after return statement will not be executed\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.code-after-unconditional-return"
+                ]
+              }
+            },
+            {
+              "id": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "bdd8114f-7340-3f9b-81a1-cf9baec096b7",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "150170ba-b867-3273-a619-4619dad26538",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "f7c76dd9-8d11-3e9f-bc64-c2e1eb6cc50b",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "705dda3d-20b1-3418-880e-f038e040c63f",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "c7069666-84a1-322c-aedb-ca0fd321e59a",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "c0b124ca-4fbf-3b3d-aec2-9ea5d25a2a88",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "03bb154d-6c36-3deb-bc83-6566c0957a5d",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "7a5b8483-a8e1-3d2d-a9c2-b231a21541d4",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            }
+          ],
           "language": "en-US",
           "contents": [
             "localizedData",
@@ -20,7 +334,411 @@
         }
       },
       "language": "en-US",
-      "results": [],
+      "results": [
+        {
+          "ruleId": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "file object opened without corresponding close"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/generation.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 93,
+                  "startColumn": 13,
+                  "endLine": 93,
+                  "endColumn": 47,
+                  "snippet": {
+                    "text": "            sys.stdout = open(os.devnull, \"w\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "bed2786473276a6347098523ac8e8038c92c5de9606c17571cbdec028ebfceb43bcbc2e2585139870138f96a6adbd362ff5d7204346e840726278815e19385fb_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "6ace627f-4c73-3782-9f72-09d5f678c9a8",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "a == a is a useless equality check"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "kernels/blocksparse/softmax.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 41,
+                  "endLine": 133,
+                  "endColumn": 49,
+                  "snippet": {
+                    "text": "    a = tl.where((ns > m) & is_causal & (a == a), 0.0, a)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c38676364f5bd82c0715876a65176e3b8fe6a143f6357a6b927908340cd5e819f7d1aed07e4119b89efb38b8b1b73d35a1b3d2787bc2737c81148d64f2ba944b_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "9d8c0381-3d5d-3e48-b16f-f37b6e964d0a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/generation.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 102,
+                  "startColumn": 22,
+                  "endLine": 102,
+                  "endColumn": 63,
+                  "snippet": {
+                    "text": "        checkpoint = torch.load(ckpt_path, map_location=\"cpu\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "678504186c3c9220089a3e432f5923d09f70e1e912e9041d09112b4db701ea9a9cccfd86a5a4d63ba96387d4fcb304090a035e0fdf9318cd0abb5f58a23475b5_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f60044af-0629-3160-be2a-fa53996cc3eb",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "code after return statement will not be executed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/math_ops.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 9,
+                  "endLine": 158,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "        return torch_based(dim, end, theta)\n        if self.use_triton:\n            return triton_based(dim, end, theta)\n        else:\n            return torch_based(dim, end, theta)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "51cc12d652c16e4b806480579cf0ca731e7eb46151dfdb3e91f3e19b6e21e9f201e30cc0b38309160b82bfb72f4c221863cea2d08ea400d68157efedb5401bed_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 35,
+                  "endLine": 66,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            init_method=lambda x: x,"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "bdd8114f-7340-3f9b-81a1-cf9baec096b7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 35,
+                  "endLine": 87,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            init_method=lambda x: x,"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_3"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "150170ba-b867-3273-a619-4619dad26538",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 35,
+                  "endLine": 80,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            init_method=lambda x: x,"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f7c76dd9-8d11-3e9f-bc64-c2e1eb6cc50b",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 35,
+                  "endLine": 73,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            init_method=lambda x: x,"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "705dda3d-20b1-3418-880e-f038e040c63f",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 167,
+                  "startColumn": 85,
+                  "endLine": 167,
+                  "endColumn": 86,
+                  "snippet": {
+                    "text": "            dim, hidden_dim, bias=False, gather_output=False, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "c7069666-84a1-322c-aedb-ca0fd321e59a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 85,
+                  "endLine": 173,
+                  "endColumn": 86,
+                  "snippet": {
+                    "text": "            dim, hidden_dim, bias=False, gather_output=False, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "c0b124ca-4fbf-3b3d-aec2-9ea5d25a2a88",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 170,
+                  "startColumn": 88,
+                  "endLine": 170,
+                  "endColumn": 89,
+                  "snippet": {
+                    "text": "            hidden_dim, dim, bias=False, input_is_parallel=True, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "03bb154d-6c36-3deb-bc83-6566c0957a5d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 228,
+                  "startColumn": 66,
+                  "endLine": 228,
+                  "endColumn": 67,
+                  "snippet": {
+                    "text": "            params.vocab_size, params.dim, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "70ca7435b1de0712b0ff84da61f8e0e4403c8f3726d9643437180463712d7ef4ee4cea42b63fbf07090593fdb024d8ea4862fd71b3e52e0751ae238566d09df4_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "7a5b8483-a8e1-3d2d-a9c2-b231a21541d4",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 237,
+                  "startColumn": 78,
+                  "endLine": 237,
+                  "endColumn": 79,
+                  "snippet": {
+                    "text": "            params.dim, params.vocab_size, bias=False, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "70ca7435b1de0712b0ff84da61f8e0e4403c8f3726d9643437180463712d7ef4ee4cea42b63fbf07090593fdb024d8ea4862fd71b3e52e0751ae238566d09df4_1"
+          },
+          "properties": {}
+        }
+      ],
       "newlineSequences": [
         "\r\n",
         "\n"
