@@ -12,26 +12,26 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
-              "name": "resources.rules.open-never-closed",
+              "id": "f60044af-0629-3160-be2a-fa53996cc3eb",
+              "name": "resources.rules.code-after-unconditional-return",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.open-never-closed"
+                "text": "Opengrep Finding: resources.rules.code-after-unconditional-return"
               },
               "fullDescription": {
-                "text": "file object opened without corresponding close"
+                "text": "code after return statement will not be executed"
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "error"
+                "level": "warning"
               },
               "help": {
-                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+                "text": "code after return statement will not be executed\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "code after return statement will not be executed\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.open-never-closed"
+                  "resources.rules.code-after-unconditional-return"
                 ]
               }
             },
@@ -85,31 +85,31 @@
               }
             },
             {
-              "id": "f60044af-0629-3160-be2a-fa53996cc3eb",
-              "name": "resources.rules.code-after-unconditional-return",
+              "id": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
+              "name": "resources.rules.open-never-closed",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.code-after-unconditional-return"
+                "text": "Opengrep Finding: resources.rules.open-never-closed"
               },
               "fullDescription": {
-                "text": "code after return statement will not be executed"
+                "text": "file object opened without corresponding close"
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "warning"
+                "level": "error"
               },
               "help": {
-                "text": "code after return statement will not be executed\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "code after return statement will not be executed\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+                "text": "file object opened without corresponding close\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "file object opened without corresponding close\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.code-after-unconditional-return"
+                  "resources.rules.open-never-closed"
                 ]
               }
             },
             {
-              "id": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
+              "id": "bdd8114f-7340-3f9b-81a1-cf9baec096b7",
               "name": "resources.rules.return-in-init",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.return-in-init"
@@ -133,7 +133,7 @@
               }
             },
             {
-              "id": "bdd8114f-7340-3f9b-81a1-cf9baec096b7",
+              "id": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
               "name": "resources.rules.return-in-init",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.return-in-init"
@@ -229,7 +229,7 @@
               }
             },
             {
-              "id": "c7069666-84a1-322c-aedb-ca0fd321e59a",
+              "id": "c0b124ca-4fbf-3b3d-aec2-9ea5d25a2a88",
               "name": "resources.rules.return-in-init",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.return-in-init"
@@ -253,7 +253,7 @@
               }
             },
             {
-              "id": "c0b124ca-4fbf-3b3d-aec2-9ea5d25a2a88",
+              "id": "c7069666-84a1-322c-aedb-ca0fd321e59a",
               "name": "resources.rules.return-in-init",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.return-in-init"
@@ -336,33 +336,33 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
+          "ruleId": "f60044af-0629-3160-be2a-fa53996cc3eb",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "file object opened without corresponding close"
+            "text": "code after return statement will not be executed"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "models/llama/llama/generation.py",
+                  "uri": "models/llama/llama/math_ops.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 93,
-                  "startColumn": 13,
-                  "endLine": 93,
-                  "endColumn": 47,
+                  "startLine": 154,
+                  "startColumn": 9,
+                  "endLine": 158,
+                  "endColumn": 48,
                   "snippet": {
-                    "text": "            sys.stdout = open(os.devnull, \"w\")"
+                    "text": "        return torch_based(dim, end, theta)\n        if self.use_triton:\n            return triton_based(dim, end, theta)\n        else:\n            return torch_based(dim, end, theta)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "bed2786473276a6347098523ac8e8038c92c5de9606c17571cbdec028ebfceb43bcbc2e2585139870138f96a6adbd362ff5d7204346e840726278815e19385fb_0"
+            "matchBasedId/v1": "51cc12d652c16e4b806480579cf0ca731e7eb46151dfdb3e91f3e19b6e21e9f201e30cc0b38309160b82bfb72f4c221863cea2d08ea400d68157efedb5401bed_0"
           },
           "properties": {}
         },
@@ -429,64 +429,33 @@
           "properties": {}
         },
         {
-          "ruleId": "f60044af-0629-3160-be2a-fa53996cc3eb",
+          "ruleId": "2a93db4f-a714-3973-bf3c-9cc26f108cf5",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "code after return statement will not be executed"
+            "text": "file object opened without corresponding close"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "models/llama/llama/math_ops.py",
+                  "uri": "models/llama/llama/generation.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 154,
-                  "startColumn": 9,
-                  "endLine": 158,
-                  "endColumn": 48,
+                  "startLine": 93,
+                  "startColumn": 13,
+                  "endLine": 93,
+                  "endColumn": 47,
                   "snippet": {
-                    "text": "        return torch_based(dim, end, theta)\n        if self.use_triton:\n            return triton_based(dim, end, theta)\n        else:\n            return torch_based(dim, end, theta)"
+                    "text": "            sys.stdout = open(os.devnull, \"w\")"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "51cc12d652c16e4b806480579cf0ca731e7eb46151dfdb3e91f3e19b6e21e9f201e30cc0b38309160b82bfb72f4c221863cea2d08ea400d68157efedb5401bed_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "models/llama/llama/model.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 35,
-                  "endLine": 66,
-                  "endColumn": 36,
-                  "snippet": {
-                    "text": "            init_method=lambda x: x,"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_0"
+            "matchBasedId/v1": "bed2786473276a6347098523ac8e8038c92c5de9606c17571cbdec028ebfceb43bcbc2e2585139870138f96a6adbd362ff5d7204346e840726278815e19385fb_0"
           },
           "properties": {}
         },
@@ -518,6 +487,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_3"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f0c7d424-b296-396f-81f2-dbd31dc822ce",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 35,
+                  "endLine": 66,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            init_method=lambda x: x,"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "fd591d78cdcb3efee754c32599b476a209b25dc1625a43bb631505034110933ca978c4ea2cc01ffdd277ba6a0f9a0072964df64068e5a60642ea543face9a08e_0"
           },
           "properties": {}
         },
@@ -615,37 +615,6 @@
           "properties": {}
         },
         {
-          "ruleId": "c7069666-84a1-322c-aedb-ca0fd321e59a",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "models/llama/llama/model.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 173,
-                  "startColumn": 85,
-                  "endLine": 173,
-                  "endColumn": 86,
-                  "snippet": {
-                    "text": "            dim, hidden_dim, bias=False, gather_output=False, init_method=lambda x: x"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_2"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "c0b124ca-4fbf-3b3d-aec2-9ea5d25a2a88",
           "kind": "fail",
           "level": "warning",
@@ -673,6 +642,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "c7069666-84a1-322c-aedb-ca0fd321e59a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "models/llama/llama/model.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 85,
+                  "endLine": 173,
+                  "endColumn": 86,
+                  "snippet": {
+                    "text": "            dim, hidden_dim, bias=False, gather_output=False, init_method=lambda x: x"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "80d026c7d409d96e2bc4c29a5a9462eee09ef331e9e29bd756c334718a19de2faea216f66c1fe2444a3b7836c7960ade898a9146aa2acb29482b7ed8fb0caa9a_2"
           },
           "properties": {}
         },
